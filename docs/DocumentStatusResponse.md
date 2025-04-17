@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **last\_uploaded\_at** | **str** | Time of last successful upload for the document, in ISO 8601 format | [optional] 
 **indexing\_status** | **str** | Indexing status, enum of NOT\_INDEXED, INDEXED, STATUS\_UNKNOWN | [optional] 
 **last\_indexed\_at** | **str** | Time of last successful indexing for the document, in ISO 8601 format | [optional] 
+**permission\_identity\_status** | **str** | Permission identity status, enum of NOT\_UPLOADED, UPLOADED, STATUS\_UNKNOWN (Always unknown if &#x60;identityDatasourceName&#x60; is set). Document visibility may be affected status is &#x60;NOT\_UPLOADED&#x60;. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none\_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -86,6 +86,7 @@ class DocumentStatusResponse(ModelNormal):
             'last_uploaded_at': (str,),  # noqa: E501
             'indexing_status': (str,),  # noqa: E501
             'last_indexed_at': (str,),  # noqa: E501
+            'permission_identity_status': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -98,6 +99,7 @@ class DocumentStatusResponse(ModelNormal):
         'last_uploaded_at': 'lastUploadedAt',  # noqa: E501
         'indexing_status': 'indexingStatus',  # noqa: E501
         'last_indexed_at': 'lastIndexedAt',  # noqa: E501
+        'permission_identity_status': 'permissionIdentityStatus',  # noqa: E501
     }
 
     read_only_vars = {
@@ -145,6 +147,7 @@ class DocumentStatusResponse(ModelNormal):
             last_uploaded_at (str): Time of last successful upload for the document, in ISO 8601 format. [optional]  # noqa: E501
             indexing_status (str): Indexing status, enum of NOT_INDEXED, INDEXED, STATUS_UNKNOWN. [optional]  # noqa: E501
             last_indexed_at (str): Time of last successful indexing for the document, in ISO 8601 format. [optional]  # noqa: E501
+            permission_identity_status (str): Permission identity status, enum of NOT_UPLOADED, UPLOADED, STATUS_UNKNOWN (Always unknown if `identityDatasourceName` is set). Document visibility may be affected status is `NOT_UPLOADED`.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,6 +237,7 @@ class DocumentStatusResponse(ModelNormal):
             last_uploaded_at (str): Time of last successful upload for the document, in ISO 8601 format. [optional]  # noqa: E501
             indexing_status (str): Indexing status, enum of NOT_INDEXED, INDEXED, STATUS_UNKNOWN. [optional]  # noqa: E501
             last_indexed_at (str): Time of last successful indexing for the document, in ISO 8601 format. [optional]  # noqa: E501
+            permission_identity_status (str): Permission identity status, enum of NOT_UPLOADED, UPLOADED, STATUS_UNKNOWN (Always unknown if `identityDatasourceName` is set). Document visibility may be affected status is `NOT_UPLOADED`.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
